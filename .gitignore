@@ -1,0 +1,5 @@
+__pycache__/
+animations/
+logs/
+*.csv
+*.log

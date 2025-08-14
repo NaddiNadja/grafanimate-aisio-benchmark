@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  data-source:
+    build:
+      context: ./data-source
+    container_name: datasource
+    ports:
+      - "3010:3010"
+    networks:
+      - internal
+
+  grafana:
+    image: grafana/grafana-enterprise
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    networks:
+      - internal
+    volumes:
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+      - ./grafana/etc:/etc/grafana
+    environment:
+      - GF_PLUGINS_PREINSTALL=yesoreyeram-infinity-datasource
+
+  grafanimate:
+    build:
+      context: ./grafanimate
+    container_name: grafanimate
+    depends_on:
+      - grafana
+    networks:
+      - internal
+    volumes:
+      - ./grafanimate/animations:/tmp/animations
+    environment:
+      - GRAFANA_HOST=grafana
+      - ANIMATION_START=0
+
+networks:
+  internal:
+    driver: bridge

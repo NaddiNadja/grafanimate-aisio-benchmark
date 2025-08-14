@@ -1,0 +1,9 @@
+apiVersion: 1
+datasources:
+  - name: Infinity
+    type: yesoreyeram-infinity-datasource
+    access: proxy
+    isDefault: true
+    jsonData:
+      type: csv
+      url: http://localhost:3010
