@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <title>AiSiO benchmark</title>
+    <script>
+      function reset() {
+        fetch("http://localhost/reset");
+      }
+    </script>
+  </head>
+  <body class="main-grid">
+    <h1>Helloooooooooo</h1>
+
+      <section class="wide">
+        <iframe
+          id="benchmark-dashboard"
+          src="http://localhost/grafana/d/c83d24b6-3bf5-4963-9a71-6f1676d75f0e/aisio-benchmark"
+          width="1000"
+          height="370"
+        ></iframe>
+        <button onclick="reset()">Reset</button>
+        <script>
+          const iframe = document.getElementById("benchmark-dashboard");
+          iframe.onload = () => {
+            const doc = iframe.contentDocument || iframe.contentWindow.document;
+            const style = doc.createElement("style");
+            style.innerHTML = `
+            .grafana-app header { display: none; }
+            .grafana-app .main-view > div { padding-top: 0px !important; }
+            .grafana-app div[style*="transition: width 1s"] { transition: width 0.5s linear !important; }
+            .grafana-app div[class*="canvas-wrapper-old"] > div { background: transparent; }
+            `;
+            doc.head.appendChild(style);
+          };
+        </script>
+      </section>
+
+      <div>
+        hallo, here you'll have some files
+      </div>
+      <img src="{{ url_for('static', filename='synthetic-benchmarks.png') }}">
+  </body>
+</html>

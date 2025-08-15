@@ -1,6 +1,0 @@
-time,label,value,unit
-0,ImageNet2012,2676,MiB/s
-0,Big (Single 8 GB File),2913,MiB/s
-0,TikTok,2929,MiB/s
-0,BaM,3208,MiB/s
-0,GDS,711,MiB/s

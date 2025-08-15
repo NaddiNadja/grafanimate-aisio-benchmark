@@ -1,10 +1,8 @@
-version: "3.8"
-
 services:
-  data-source:
+  dashboard:
     build:
-      context: ./data-source
-    container_name: datasource
+      context: ./dashboard
+    container_name: dashboard
     ports:
       - "3010:3010"
     networks:
@@ -21,22 +19,23 @@ services:
     volumes:
       - ./grafana/dashboards:/var/lib/grafana/dashboards
       - ./grafana/etc:/etc/grafana
+      - ./grafana/css:/usr/share/grafana/public/css
     environment:
       - GF_PLUGINS_PREINSTALL=yesoreyeram-infinity-datasource
 
-  grafanimate:
-    build:
-      context: ./grafanimate
-    container_name: grafanimate
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: unless-stopped
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:80" # Expose Nginx on port 80
     depends_on:
+      - dashboard
       - grafana
     networks:
       - internal
-    volumes:
-      - ./grafanimate/animations:/tmp/animations
-    environment:
-      - GRAFANA_HOST=grafana
-      - ANIMATION_START=0
 
 networks:
   internal:

@@ -60,9 +60,9 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 5,
+        "h": 3,
         "w": 3,
-        "x": 1,
+        "x": 0,
         "y": 0
       },
       "id": 4,
@@ -81,7 +81,7 @@
         "showThresholdMarkers": false,
         "sizing": "auto"
       },
-      "pluginVersion": "12.2.0-16952534486",
+      "pluginVersion": "12.2.0-16979757807",
       "targets": [
         {
           "columns": [
@@ -108,40 +108,15 @@
           "root_selector": "",
           "source": "url",
           "type": "csv",
-          "url": "http://datasource:3010/data?source=posix&from=$__from&to=$__to",
+          "url": "http://nginx/data?source=posix",
           "url_options": {
             "data": "",
             "method": "GET"
           }
         }
       ],
-      "title": "POSIX bandwidth",
-      "type": "gauge"
-    },
-    {
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 1,
-        "w": 17,
-        "x": 4,
-        "y": 0
-      },
-      "id": 15,
-      "options": {
-        "code": {
-          "language": "plaintext",
-          "showLineNumbers": false,
-          "showMiniMap": false
-        },
-        "content": "",
-        "mode": "markdown"
-      },
-      "pluginVersion": "12.2.0-16952534486",
       "title": "",
-      "type": "text"
+      "type": "gauge"
     },
     {
       "datasource": {
@@ -182,9 +157,9 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 17,
-        "x": 4,
-        "y": 1
+        "w": 21,
+        "x": 3,
+        "y": 0
       },
       "id": 1,
       "options": {
@@ -211,7 +186,7 @@
         "sizing": "auto",
         "valueMode": "hidden"
       },
-      "pluginVersion": "12.2.0-16952534486",
+      "pluginVersion": "12.2.0-16979757807",
       "targets": [
         {
           "columns": [
@@ -239,7 +214,7 @@
           "root_selector": "",
           "source": "url",
           "type": "csv",
-          "url": "http://datasource:3010/data?source=posix&from=$__from&to=$__to",
+          "url": "http://nginx/data?source=posix",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -257,31 +232,6 @@
         }
       ],
       "type": "bargauge"
-    },
-    {
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 17,
-        "x": 4,
-        "y": 4
-      },
-      "id": 16,
-      "options": {
-        "code": {
-          "language": "plaintext",
-          "showLineNumbers": false,
-          "showMiniMap": false
-        },
-        "content": "",
-        "mode": "markdown"
-      },
-      "pluginVersion": "12.2.0-16952534486",
-      "title": "",
-      "type": "text"
     },
     {
       "datasource": {
@@ -321,10 +271,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 5,
+        "h": 3,
         "w": 3,
-        "x": 1,
-        "y": 5
+        "x": 0,
+        "y": 3
       },
       "id": 20,
       "options": {
@@ -342,7 +292,7 @@
         "showThresholdMarkers": false,
         "sizing": "auto"
       },
-      "pluginVersion": "12.2.0-16952534486",
+      "pluginVersion": "12.2.0-16979757807",
       "targets": [
         {
           "columns": [
@@ -369,14 +319,14 @@
           "root_selector": "",
           "source": "url",
           "type": "csv",
-          "url": "http://datasource:3010/data?source=gds&from=$__from&to=$__to",
+          "url": "http://nginx/data?source=gds",
           "url_options": {
             "data": "",
             "method": "GET"
           }
         }
       ],
-      "title": "GDS bandwidth",
+      "title": "",
       "type": "gauge"
     },
     {
@@ -418,9 +368,9 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 17,
-        "x": 4,
-        "y": 6
+        "w": 21,
+        "x": 3,
+        "y": 3
       },
       "id": 22,
       "options": {
@@ -447,7 +397,7 @@
         "sizing": "auto",
         "valueMode": "hidden"
       },
-      "pluginVersion": "12.2.0-16952534486",
+      "pluginVersion": "12.2.0-16979757807",
       "targets": [
         {
           "columns": [
@@ -475,7 +425,7 @@
           "root_selector": "",
           "source": "url",
           "type": "csv",
-          "url": "http://datasource:3010/data?source=gds&from=$__from&to=$__to",
+          "url": "http://nginx/data?source=gds",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -493,31 +443,6 @@
         }
       ],
       "type": "bargauge"
-    },
-    {
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 17,
-        "x": 4,
-        "y": 9
-      },
-      "id": 17,
-      "options": {
-        "code": {
-          "language": "plaintext",
-          "showLineNumbers": false,
-          "showMiniMap": false
-        },
-        "content": "",
-        "mode": "markdown"
-      },
-      "pluginVersion": "12.2.0-16952534486",
-      "title": "",
-      "type": "text"
     },
     {
       "datasource": {
@@ -557,10 +482,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 5,
+        "h": 3,
         "w": 3,
-        "x": 1,
-        "y": 10
+        "x": 0,
+        "y": 6
       },
       "id": 21,
       "options": {
@@ -578,7 +503,7 @@
         "showThresholdMarkers": false,
         "sizing": "auto"
       },
-      "pluginVersion": "12.2.0-16952534486",
+      "pluginVersion": "12.2.0-16979757807",
       "targets": [
         {
           "columns": [
@@ -605,14 +530,14 @@
           "root_selector": "",
           "source": "url",
           "type": "csv",
-          "url": "http://datasource:3010/data?source=aisio&from=$__from&to=$__to",
+          "url": "http://nginx/data?source=aisio",
           "url_options": {
             "data": "",
             "method": "GET"
           }
         }
       ],
-      "title": "AiSiO bandwidth",
+      "title": "",
       "type": "gauge"
     },
     {
@@ -654,9 +579,9 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 17,
-        "x": 4,
-        "y": 11
+        "w": 21,
+        "x": 3,
+        "y": 6
       },
       "id": 23,
       "options": {
@@ -683,7 +608,7 @@
         "sizing": "auto",
         "valueMode": "hidden"
       },
-      "pluginVersion": "12.2.0-16952534486",
+      "pluginVersion": "12.2.0-16979757807",
       "targets": [
         {
           "columns": [
@@ -711,7 +636,7 @@
           "root_selector": "",
           "source": "url",
           "type": "csv",
-          "url": "http://datasource:3010/data?source=aisio&from=$__from&to=$__to",
+          "url": "http://nginx/data?source=aisio",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -729,183 +654,29 @@
         }
       ],
       "type": "bargauge"
-    },
-    {
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 1,
-        "w": 17,
-        "x": 4,
-        "y": 14
-      },
-      "id": 18,
-      "options": {
-        "code": {
-          "language": "plaintext",
-          "showLineNumbers": false,
-          "showMiniMap": false
-        },
-        "content": "",
-        "mode": "markdown"
-      },
-      "pluginVersion": "12.2.0-16952534486",
-      "title": "",
-      "type": "text"
-    },
-    {
-      "datasource": {
-        "type": "yesoreyeram-infinity-datasource",
-        "uid": "PD0067CAD9A63E081"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "fixedColor": "yellow",
-            "mode": "thresholds"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "fillOpacity": 80,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "lineWidth": 0,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
-          "min": 0,
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "blue",
-                "value": 0
-              },
-              {
-                "color": "light-green",
-                "value": 2000
-              },
-              {
-                "color": "green",
-                "value": 2912
-              },
-              {
-                "color": "semi-dark-green",
-                "value": 2928
-              },
-              {
-                "color": "#EAB839",
-                "value": 3000
-              }
-            ]
-          },
-          "unit": "MiB/s"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 12,
-        "w": 12,
-        "x": 11,
-        "y": 15
-      },
-      "id": 12,
-      "options": {
-        "barRadius": 0,
-        "barWidth": 0.71,
-        "colorByField": "progress",
-        "fullHighlight": false,
-        "groupWidth": 0.7,
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "bottom",
-          "showLegend": false
-        },
-        "orientation": "auto",
-        "showValue": "always",
-        "stacking": "none",
-        "tooltip": {
-          "hideZeros": false,
-          "mode": "none",
-          "sort": "asc"
-        },
-        "xField": "label",
-        "xTickLabelRotation": 0,
-        "xTickLabelSpacing": 0
-      },
-      "pluginVersion": "12.2.0-16952534486",
-      "targets": [
-        {
-          "columns": [
-            {
-              "selector": "epoch",
-              "text": "timestamp",
-              "timestampFormat": "2006-01-02T15:04:05Z07:00",
-              "type": "timestamp_epoch_s"
-            },
-            {
-              "selector": "value",
-              "text": "progress",
-              "type": "number"
-            },
-            {
-              "selector": "label",
-              "text": "label",
-              "type": "string"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "PD0067CAD9A63E081"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "parser": "backend",
-          "refId": "A",
-          "root_selector": "",
-          "source": "url",
-          "type": "csv",
-          "url": "http://datasource:3010/data?source=synthetic&from=0&to=1",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        }
-      ],
-      "title": "AiSiO vs BaM vs GDS",
-      "type": "barchart"
     }
   ],
   "preload": false,
+  "refresh": "500ms",
   "schemaVersion": 41,
   "tags": [],
   "templating": {
     "list": []
   },
   "time": {
-    "from": "1970-01-01T00:00:00Z",
-    "to": "1970-01-01T00:00:01Z"
+    "from": "now-5m",
+    "to": "now"
   },
-  "timepicker": {},
+  "timepicker": {
+    "hidden": true,
+    "refresh_intervals": [
+      "500ms",
+      "1s",
+      "5s"
+    ]
+  },
   "timezone": "",
   "title": "AiSiO benchmark",
   "uid": "c83d24b6-3bf5-4963-9a71-6f1676d75f0e",
-  "version": 2
+  "version": 1
 }

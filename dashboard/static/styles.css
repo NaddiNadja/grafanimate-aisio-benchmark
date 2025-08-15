@@ -1,0 +1,19 @@
+body {
+  color: rgb(204, 204, 220);
+  background-color: rgb(17, 18, 23);
+}
+
+iframe { 
+  border: none;
+}
+
+.main-grid {
+  display:grid;
+  grid-template-columns: [content-start] 500px 500px [content-end];
+  gap: 10px;
+  justify-content: center;
+}
+
+.main-grid > .wide {
+  grid-column: content;
+}

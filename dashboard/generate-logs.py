@@ -24,7 +24,7 @@ def generate_logs():
       while i < 1000:
         t = gettime(start)
         file.write(f"{t},{i},100,{i/(t or 0.000001)}\n")
-        time.sleep(1)
+        time.sleep(0.5)
         i += random.randint(mn,mx)
 
       t = gettime(start)
