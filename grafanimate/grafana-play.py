@@ -4,8 +4,8 @@ from grafanimate.scenarios import AnimationScenario, SequencingMode
 
 def play():
     host = os.getenv("GRAFANA_HOST") or "localhost"
-    start = int(os.getenv("ANIMATION_START")) or -20
-    end = 36
+    start = int(os.getenv("ANIMATION_START") or -20)
+    end = 92
 
     return AnimationScenario(
         grafana_url=f"http://{host}:3000/",
