@@ -86,12 +86,12 @@
         {
           "columns": [
             {
-              "selector": "time",
+              "selector": "Time",
               "text": "Epoch",
               "type": "number"
             },
             {
-              "selector": "mib/s",
+              "selector": " MiB/s",
               "text": "Bandwidth",
               "type": "number"
             }
@@ -108,7 +108,7 @@
           "root_selector": "",
           "source": "url",
           "type": "csv",
-          "url": "http://nginx/data?source=posix",
+          "url": "http://nginx/posix?from=$__from&to=$__to",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -191,13 +191,13 @@
         {
           "columns": [
             {
-              "selector": "time",
+              "selector": "Time",
               "text": "timestamp",
               "timestampFormat": "2006-01-02T15:04:05Z07:00",
               "type": "timestamp_epoch_s"
             },
             {
-              "selector": "batches",
+              "selector": " Batches",
               "text": "progress",
               "type": "number"
             }
@@ -214,7 +214,7 @@
           "root_selector": "",
           "source": "url",
           "type": "csv",
-          "url": "http://nginx/data?source=posix",
+          "url": "http://nginx/posix?from=$__from&to=$__to",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -222,15 +222,6 @@
         }
       ],
       "title": "POSIX completion",
-      "transformations": [
-        {
-          "id": "convertFieldType",
-          "options": {
-            "conversions": [],
-            "fields": {}
-          }
-        }
-      ],
       "type": "bargauge"
     },
     {
@@ -297,12 +288,12 @@
         {
           "columns": [
             {
-              "selector": "time",
+              "selector": "Time",
               "text": "Epoch",
               "type": "number"
             },
             {
-              "selector": "mib/s",
+              "selector": " MiB/s",
               "text": "Bandwidth",
               "type": "number"
             }
@@ -319,7 +310,7 @@
           "root_selector": "",
           "source": "url",
           "type": "csv",
-          "url": "http://nginx/data?source=gds",
+          "url": "http://nginx/gds?from=$__from&to=$__to",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -402,13 +393,13 @@
         {
           "columns": [
             {
-              "selector": "time",
+              "selector": "Time",
               "text": "timestamp",
               "timestampFormat": "2006-01-02T15:04:05Z07:00",
               "type": "timestamp_epoch_s"
             },
             {
-              "selector": "batches",
+              "selector": " Batches",
               "text": "progress",
               "type": "number"
             }
@@ -425,7 +416,7 @@
           "root_selector": "",
           "source": "url",
           "type": "csv",
-          "url": "http://nginx/data?source=gds",
+          "url": "http://nginx/gds?from=$__from&to=$__to",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -433,15 +424,6 @@
         }
       ],
       "title": "GDS completion",
-      "transformations": [
-        {
-          "id": "convertFieldType",
-          "options": {
-            "conversions": [],
-            "fields": {}
-          }
-        }
-      ],
       "type": "bargauge"
     },
     {
@@ -508,12 +490,12 @@
         {
           "columns": [
             {
-              "selector": "time",
+              "selector": "Time",
               "text": "Epoch",
               "type": "number"
             },
             {
-              "selector": "mib/s",
+              "selector": " MiB/s",
               "text": "Bandwidth",
               "type": "number"
             }
@@ -530,7 +512,7 @@
           "root_selector": "",
           "source": "url",
           "type": "csv",
-          "url": "http://nginx/data?source=aisio",
+          "url": "http://nginx/aisio?from=$__from&to=$__to",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -613,13 +595,13 @@
         {
           "columns": [
             {
-              "selector": "time",
+              "selector": "Time",
               "text": "timestamp",
               "timestampFormat": "2006-01-02T15:04:05Z07:00",
               "type": "timestamp_epoch_s"
             },
             {
-              "selector": "batches",
+              "selector": " Batches",
               "text": "progress",
               "type": "number"
             }
@@ -636,7 +618,7 @@
           "root_selector": "",
           "source": "url",
           "type": "csv",
-          "url": "http://nginx/data?source=aisio",
+          "url": "http://nginx/aisio?from=$__from&to=$__to",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -644,15 +626,6 @@
         }
       ],
       "title": "AiSiO completion",
-      "transformations": [
-        {
-          "id": "convertFieldType",
-          "options": {
-            "conversions": [],
-            "fields": {}
-          }
-        }
-      ],
       "type": "bargauge"
     }
   ],
@@ -664,7 +637,7 @@
     "list": []
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {

@@ -8,4 +8,4 @@ COPY . .
 RUN pip install -r requirements.txt
 
 EXPOSE 3010
-CMD ["python3", "-u", "data-source.py"]
+CMD ["python3", "-u", "dashboard.py"]
